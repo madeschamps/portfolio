@@ -1,0 +1,41 @@
+.introduction{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 99;
+    // background-color: #141516;
+    background-color: #b3c2bf; 
+
+    svg{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: calc(100% + 300px);
+        path{
+            // fill: #141516;
+			fill: #b3c2bf;
+
+        }
+    }
+
+    p{
+        display: flex;
+        color: black;
+        font-size: 90px;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+@-webkit-keyframes fadeInScale {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(2);
+    }
+}
