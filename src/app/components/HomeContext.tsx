@@ -85,7 +85,7 @@ export default function HomeContent() {
 				<code>Marc-André Deschamps</code>
 				<h1 className="text-5xl md:text-7xl mb-5">Front-end developer & WordPress expert</h1>
 				<p className="text-2xl mb-5">Extensive Experience: With a journey that spans back to 2016,<br />I&#39;ve successfully navigated the dynamic landscape of WordPress development and other web technologies. </p>
-				<p className="text-2xl">As a native Canadian, I've had the privilege of living and working in the UK and Spain before settling in Portugal. These experiences have taught me the importance of adaptability and effective communication across different languages and cultures..</p>
+				<p className="text-2xl">As a native Canadian, I&#39;ve had the privilege of living and working in the UK and Spain before settling in Portugal. These experiences have taught me the importance of adaptability and effective communication across different languages and cultures..</p>
 			</motion.div>
 
 			<div className="mb-20">
