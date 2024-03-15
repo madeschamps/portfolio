@@ -40,7 +40,6 @@ export default function TopBanner({ }: Props) {
     });
 
     requestAnimationFrame(animate);
-
     // Scroll event listener
     window.addEventListener('scroll', handleScroll);
 
@@ -53,15 +52,15 @@ export default function TopBanner({ }: Props) {
   return (
     <main className={styles.main}>
       {/* Your background image */}
-      <Image 
+      <Image
         src="/images/avatarmarc.jpg"
         fill={true}
         alt="background"
       />
-      
+
       {/* Your slider container */}
       <div className={styles.sliderContainer}>
-        <motion.div  className={styles.slider} animate={controls}>
+        <motion.div className={styles.slider} animate={controls}>
           {/* Your text elements */}
           <p>Freelance Web Developer -</p>
           <p>WordPress Expert -</p>
