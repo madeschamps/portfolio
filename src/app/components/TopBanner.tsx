@@ -53,7 +53,7 @@ export default function TopBanner({ }: Props) {
     <main className={styles.main}>
       {/* Your background image */}
       <Image
-        src="/images/avatarmarc.jpg"
+        src="/portfolio/images/avatarmarc.jpg"
         fill={true}
         alt="background"
       />
