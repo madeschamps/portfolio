@@ -1,0 +1,62 @@
+.module {}
+
+.halfText {
+	font-size: 95px;
+	transform: translateY(50%);
+
+	&--bottom {
+		transform: translateY(-50%);
+	}
+}
+
+.title {
+	line-height: 93px;
+	font-size: 119px;
+}
+
+.introText {
+	display: flex;
+	gap: 50px;
+	align-items: flex-end;
+	position: relative;
+}
+
+.textToSplit {
+	position: relative;
+	top: -70px;
+}
+
+.amText {
+	font-size: 90px;
+	line-height: 75px;
+	display: block;
+	text-align: left;
+	margin-top: 56px;
+}
+
+.hiText {
+	font-size: 40px;
+	display: block;
+	opacity: 0.5;
+	text-align: left;
+	position: absolute;
+	top: 0px;
+}
+
+.revealText {
+	position: relative;
+	top: -210px;
+	font-size: 90px;
+	opacity: 0;
+	color: #91caff;
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+.icon {
+	position: fixed;
+	width: 300px;
+	height: 300px;
+	top: 300px;
+	left: 100px;
+}
