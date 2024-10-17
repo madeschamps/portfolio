@@ -1,62 +1,116 @@
-.module {}
+@import '../../mixins';
+
+.module {
+	background: #dcdcdc;
+	color: #000;
+}
+
+.title {
+	font-size: clamp(45px, 12vw, 118px);
+	line-height: 0.95;
+}
+
+.introText {
+	transform: translate3d(0px, -3.4077%, 0px);
+
+	@include breakpoint(sm) {
+		display: flex;
+		gap: 20px;
+		align-items: flex-end;
+		position: relative;
+	}
+
+	@include breakpoint(md) {
+		gap: 50px;
+	}
+}
+
+.amText {
+	display: block;
+	text-align: left;
+	font-size: clamp(40px, 11vw, 90px);
+	line-height: 1; // Set line-height to tightly wrap the text
+	vertical-align: baseline;
+
+	@include breakpoint(sm) {
+		margin-top: 30px;
+	}
+
+	@include breakpoint(md) {
+		margin-top: 45px;
+	}
+}
+
+.hiText {
+	display: block;
+	opacity: 1;
+	color: #e15600;
+	text-align: left;
+	line-height: 1;
+	font-size: clamp(40px, 10vw, 45px);
+
+	@include breakpoint(sm) {
+		position: absolute;
+		top: -10px;
+	}
+
+	@include breakpoint(md) {
+		top: 0px;
+	}
+}
+
+.textToSplit {
+	position: relative;
+	top: -40px; // Adjust for smaller screens
+
+	@include breakpoint(md) {
+		top: -80px;
+	}
+}
+
+.halfTextParent {
+	transform: translate3d(0px, -3%, 0px);
+}
+
+.halfTextBottomParent {
+	transform: translate3d(0px, 3%, 0px);
+}
 
 .halfText {
-	font-size: 95px;
 	transform: translateY(50%);
+	font-weight: 500;
+	text-align: center;
+	font-size: clamp(40px, 12vw, 105px);
 
 	&--bottom {
 		transform: translateY(-50%);
 	}
 }
 
-.title {
-	line-height: 93px;
-	font-size: 119px;
-}
-
-.introText {
-	display: flex;
-	gap: 50px;
-	align-items: flex-end;
-	position: relative;
-}
-
-.textToSplit {
-	position: relative;
-	top: -70px;
-}
-
-.amText {
-	font-size: 90px;
-	line-height: 75px;
-	display: block;
-	text-align: left;
-	margin-top: 56px;
-}
-
-.hiText {
-	font-size: 40px;
-	display: block;
-	opacity: 0.5;
-	text-align: left;
-	position: absolute;
-	top: 0px;
-}
-
 .revealText {
-	position: relative;
-	top: -210px;
-	font-size: 90px;
+	position: absolute;
+	left: -5px;
+	top: 50%;
 	opacity: 0;
-	color: #91caff;
+	color: #e15600;
 	text-transform: uppercase;
 	font-style: italic;
+	font-size: clamp(20px, 11vw, 97px);
+
+	@include breakpoint(md) {
+		left: -11px;
+	}
 }
 
-.icon {
-	position: fixed;
-	width: 300px;
-	height: 300px;
-	top: 300px;
-	left: 100px;
+.imageProfile {
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	height: auto;
+	width: 300px; // Smaller image for mobile
+
+	@include breakpoint(md) {
+		width: 400px; // Larger image for larger screens
+	}
 }
