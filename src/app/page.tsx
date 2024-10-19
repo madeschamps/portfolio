@@ -1,14 +1,18 @@
 import Image from "next/image";
-import Section1 from "./components/Section1/Section1";
-import Section2 from "./components/Section2/Section2";
 import SectionProjects from "./components/SectionProjects/SectionProjects";
+import SectionSkills from "./components/SectionSkills/SectionSkills";
+import SectionIntro from "./components/SectionIntro/SectionIntro";
+import SectionContact from "./components/SectionContact/SectionContact";
+import Footer from "./components/Footer/Footer";
 
 export default function Home() {
   return (
     <>
-      <Section1 />
+      <SectionIntro />
+      <SectionSkills />
       <SectionProjects />
-      <Section2 />
+      <SectionContact />
+      <Footer />
     </>
   );
 }

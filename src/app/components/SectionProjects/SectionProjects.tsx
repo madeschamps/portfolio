@@ -64,7 +64,7 @@ export default function SectionProjects() {
 	return (
 		<section className="h-screen bg-gray-800 overflow-hidden" ref={triggerRef}>
 			<div className="container mx-auto px-4 pt-16">
-				<h2 ref={titleRef} className="text-7xl font-bold mb-8 text-white opacity-0">Recent Projects</h2>
+				<h2 ref={titleRef} className="text-7xl font-bold mb-8 text-white opacity-0">"Leveling Up: My Developer Adventure" - Experience timeline</h2>
 			</div>
 			<div className="container mx-auto flex items-center">
 				<div ref={sectionRef} className="flex gap-12 px-4">
@@ -86,6 +86,7 @@ export default function SectionProjects() {
 					))}
 				</div>
 			</div>
+			<p>More in depth on my LinkedIn</p>
 		</section>
 	)
 }

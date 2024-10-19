@@ -3,12 +3,11 @@
 .module {
 	background: #dcdcdc;
 	color: #000;
+	overflow: hidden;
 }
 
-.title {
-	font-size: clamp(45px, 12vw, 118px);
-	line-height: 0.95;
-}
+
+
 
 .introText {
 	transform: translate3d(0px, -3.4077%, 0px);
@@ -25,7 +24,29 @@
 	}
 }
 
+
+
+.hiText {
+	//Hi, Ola
+	display: block;
+	opacity: 1;
+	color: var(--color-orange);
+	text-align: left;
+	line-height: 1;
+	font-size: clamp(40px, 10vw, 45px);
+
+	@include breakpoint(sm) {
+		position: absolute;
+		top: -10px;
+	}
+
+	@include breakpoint(md) {
+		top: 0px;
+	}
+}
+
 .amText {
+	//I am 
 	display: block;
 	text-align: left;
 	font-size: clamp(40px, 11vw, 90px);
@@ -41,22 +62,10 @@
 	}
 }
 
-.hiText {
-	display: block;
-	opacity: 1;
-	color: #e15600;
-	text-align: left;
-	line-height: 1;
-	font-size: clamp(40px, 10vw, 45px);
-
-	@include breakpoint(sm) {
-		position: absolute;
-		top: -10px;
-	}
-
-	@include breakpoint(md) {
-		top: 0px;
-	}
+.myName {
+	//Marc
+	font-size: clamp(45px, 12vw, 118px);
+	line-height: 0.95;
 }
 
 .textToSplit {
@@ -92,7 +101,7 @@
 	left: -5px;
 	top: 50%;
 	opacity: 0;
-	color: #e15600;
+	color: var(--color-orange);
 	text-transform: uppercase;
 	font-style: italic;
 	font-size: clamp(20px, 11vw, 97px);
@@ -102,15 +111,36 @@
 	}
 }
 
-.imageProfile {
+.imageProfileWrapper {
 	position: absolute;
 	bottom: 0px;
 	left: 50%;
 	transform: translateX(-50%);
 	height: auto;
 	width: 300px; // Smaller image for mobile
+	overflow: hidden;
 
 	@include breakpoint(md) {
 		width: 400px; // Larger image for larger screens
+	}
+}
+
+.imageProfile {
+	overflow: hidden;
+	transform: translate3d(0px, 9.0123%, 0px);
+}
+
+@keyframes fadeInBottom {
+	from {
+		opacity: 1;
+		bottom: -10px;
+		transform: rotate(5deg);
+	}
+
+	to {
+		opacity: 1;
+		bottom: 0px;
+		transform: rotate(0deg);
+
 	}
 }
