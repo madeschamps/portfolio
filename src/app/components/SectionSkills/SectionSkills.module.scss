@@ -9,12 +9,15 @@
 	background: var(--color-orange);
 }
 
+
+
 .introPhrases {
 	font-size: 100px;
 	color: white;
 	font-weight: bold;
 	text-align: center;
 	line-height: 0;
+	width: 100%;
 }
 
 .introPhrase {
@@ -44,4 +47,8 @@
 	gap: 20px;
 	width: 100%;
 	justify-content: flex-end;
+}
+
+.pinSpace {
+	height: 150vh;
 }

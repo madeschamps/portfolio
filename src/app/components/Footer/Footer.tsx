@@ -23,7 +23,6 @@ export default function Footer() {
 				start: "bottom bottom", // Trigger when the bottom of the section hits the bottom of the viewport
 				end: "bottom top", // End when the bottom of the section reaches the top of the viewport
 				scrub: true,
-				markers: true, // Remove when testing is complete
 			},
 		});
 
