@@ -1,4 +1,4 @@
-@import '../../mixins';
+@use '../../mixins';
 
 .module {
 	background: #dcdcdc;
@@ -7,19 +7,17 @@
 }
 
 
-
-
 .introText {
 	transform: translate3d(0px, -3.4077%, 0px);
 
-	@include breakpoint(sm) {
+	@include mixins.breakpoint(sm) {
 		display: flex;
 		gap: 20px;
 		align-items: flex-end;
 		position: relative;
 	}
 
-	@include breakpoint(md) {
+	@include mixins.breakpoint(md) {
 		gap: 50px;
 	}
 }
@@ -35,12 +33,12 @@
 	line-height: 1;
 	font-size: clamp(40px, 10vw, 45px);
 
-	@include breakpoint(sm) {
+	@include mixins.breakpoint(sm) {
 		position: absolute;
 		top: -10px;
 	}
 
-	@include breakpoint(md) {
+	@include mixins.breakpoint(md) {
 		top: 0px;
 	}
 }
@@ -53,11 +51,11 @@
 	line-height: 1; // Set line-height to tightly wrap the text
 	vertical-align: baseline;
 
-	@include breakpoint(sm) {
+	@include mixins.breakpoint(sm) {
 		margin-top: 30px;
 	}
 
-	@include breakpoint(md) {
+	@include mixins.breakpoint(md) {
 		margin-top: 45px;
 	}
 }
@@ -72,7 +70,7 @@
 	position: relative;
 	top: -40px; // Adjust for smaller screens
 
-	@include breakpoint(md) {
+	@include mixins.breakpoint(md) {
 		top: -80px;
 	}
 }
@@ -106,7 +104,7 @@
 	font-style: italic;
 	font-size: clamp(20px, 11vw, 97px);
 
-	@include breakpoint(md) {
+	@include mixins.breakpoint(md) {
 		left: -11px;
 	}
 }
@@ -120,7 +118,7 @@
 	width: 300px; // Smaller image for mobile
 	overflow: hidden;
 
-	@include breakpoint(md) {
+	@include mixins.breakpoint(md) {
 		width: 400px; // Larger image for larger screens
 	}
 }

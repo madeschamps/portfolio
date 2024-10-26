@@ -19,8 +19,8 @@ export default function SectionSkills() {
     const phrase2 = phrase2Ref.current
     const cards = cardRefs.current
 
-    gsap.set(phrase1, { y: -50, filter: "blur(0px)" })
-    gsap.set(phrase2, { y: 250, opacity: 0, scale: 0.5, filter: "blur(10px)" })
+    gsap.set(phrase1, { y: 0, opacity: 1, filter: "blur(0px)" })
+    gsap.set(phrase2, { y: 350, opacity: 0, scale: 0.5, filter: "blur(10px)" })
     gsap.set(cards, { y: 100, opacity: 0 })
 
     // Early animation ScrollTrigger (triggered when the section enters the viewport)
@@ -46,7 +46,7 @@ export default function SectionSkills() {
         duration: 0.25,
       }, 0)
       .to(phrase2, {
-        y: 0,
+        y: 50,
         opacity: 1,
         scale: 1,
         duration: 0.5,
@@ -92,7 +92,7 @@ export default function SectionSkills() {
 
   return (
     <>
-      <section ref={sectionRef} className={`${styles.module} min-h-screen text-white py-12 px-4 sm:px-6 lg:px-8 flex flex-col justify-center overflow-hidden`}>
+      <section ref={sectionRef} className={`${styles.module} min-h-screen overflow-hidden`}>
         <div className="max-w-7xl mx-auto">
           <div className={styles.introPhrases}>
             <p ref={phrase1Ref} className={styles.introPhrase}>
@@ -102,41 +102,42 @@ export default function SectionSkills() {
               They Cut Through <span className={styles.highlightText}>Code</span>
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div ref={el => { cardRefs.current[0] = el }} className="bg-gray-800 bg-opacity-50 rounded-lg p-6 flex flex-col items-center justify-between">
-              <div>
-                <h3 className="text-4xl font-semibold mb-2">WordPress & PHP Mastery</h3>
-                <p className={`${styles.cardText} text-gray-300 text-xl`}>
-                  With over 10 years of experience in custom WordPress development, I create flexible, secure solutions using PHP, from custom plugins to API integrations. Using Gutenberg's block-based editor, I make content management simple and intuitive, allowing you to easily update your site without technical expertise.
-                </p>
+          <div>
+            <div className={`${styles.grid} grid grid-cols-1 lg:grid-cols-3`}>
+              <div ref={el => { cardRefs.current[0] = el }} className="bg-gray-800 bg-opacity-50 rounded-lg p-6 flex flex-col items-center justify-between">
+                <div>
+                  <h3 className="text-4xl font-semibold mb-2">WordPress & PHP Mastery</h3>
+                  <p className={`${styles.cardText} text-gray-300 text-xl`}>
+                    With over 10 years of experience in custom WordPress development, I create flexible, secure solutions using PHP, from custom plugins to API integrations. Using Gutenberg's block-based editor, I make content management simple and intuitive, allowing you to easily update your site without technical expertise.
+                  </p>
+                </div>
+                <div className={styles.icons}>
+                  <img src={'/icon-wp.svg'} />
+                  <img src={'/icon-php.svg'} />
+                </div>
               </div>
-              <div className={styles.icons}>
-                <img src={'/icon-wp.svg'} />
-                <img src={'/icon-php.svg'} />
+              <div ref={el => { cardRefs.current[1] = el }} className="bg-gray-800 bg-opacity-50 rounded-lg p-6 flex flex-col items-center justify-between">
+                <div>
+                  <h3 className="text-4xl font-semibold mb-2">JavaScript & API Integration</h3>
+                  <p className={`${styles.cardText} text-gray-300 text-xl`}>
+                    I harness the power of JavaScript to build dynamic, responsive sites that engage users and seamlessly interact with APIs. Whether it's fetching real-time data or integrating third-party services, I ensure smooth and efficient functionality tailored to your needs.
+                  </p>
+                </div>
+                <div className={styles.icons}>
+                  <img src={'/icon-js.svg'} />
+                </div>
               </div>
-            </div>
-            <div ref={el => { cardRefs.current[1] = el }} className="bg-gray-800 bg-opacity-50 rounded-lg p-6 flex flex-col items-center justify-between">
-              <div>
-                <h3 className="text-4xl font-semibold mb-2">JavaScript & API Integration</h3>
-                <p className={`${styles.cardText} text-gray-300 text-xl`}>
-                  I harness the power of JavaScript to build dynamic, responsive sites that engage users and seamlessly interact with APIs. Whether it's fetching real-time data or integrating third-party services, I ensure smooth and efficient functionality tailored to your needs.
-                </p>
-              </div>
-              <div className={styles.icons}>
-                <img src={'/icon-js.svg'} />
-              </div>
-            </div>
-            <div ref={el => { cardRefs.current[2] = el }} className="bg-gray-800 bg-opacity-50 rounded-lg p-6 flex flex-col items-center justify-between">
-              <div>
-                <h3 className="text-4xl font-semibold mb-2">Next.js & React: Modern Web Development</h3>
-                <p className={`${styles.cardText} text-gray-300 text-xl`}>
-                  By combining React's power with the performance optimization of Next.js, I build fast, SEO-optimized sites that scale with your business. Leveraging server-side rendering (SSR) and static site generation (SSG), I ensure your site is lightning fast and ready for the future.
-                </p>
-              </div>
-              <div className={styles.icons}>
-                <img src={'/icon-next.svg'} />
-                <img src={'/icon-react.svg'} />
+              <div ref={el => { cardRefs.current[2] = el }} className="bg-gray-800 bg-opacity-50 rounded-lg p-6 flex flex-col items-center justify-between">
+                <div>
+                  <h3 className="text-4xl font-semibold mb-2">Next.js & React: Modern Web Development</h3>
+                  <p className={`${styles.cardText} text-gray-300 text-xl`}>
+                    By combining React's power with the performance optimization of Next.js, I build fast, SEO-optimized sites that scale with your business. Leveraging server-side rendering (SSR) and static site generation (SSG), I ensure your site is lightning fast and ready for the future.
+                  </p>
+                </div>
+                <div className={styles.icons}>
+                  <img src={'/icon-next.svg'} />
+                  <img src={'/icon-react.svg'} />
+                </div>
               </div>
             </div>
           </div>
