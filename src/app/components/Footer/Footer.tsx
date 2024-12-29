@@ -7,7 +7,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
-	const sectionRef = useRef(null);
 	const footerContainerRef = useRef(null);
 
 	useEffect(() => {
@@ -37,7 +36,7 @@ export default function Footer() {
 				<div className="container mx-auto px-4 text-center">
 					<h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Collaborate?</h2>
 					<p className="text-xl mb-8 max-w-2xl mx-auto">
-						I'm always excited to work on new projects and bring innovative ideas to life. Let's create something amazing together!
+						I&#39;m always excited to work on new projects and bring innovative ideas to life. Let&#39;s create something amazing together!
 					</p>
 					<div className="inline-block">
 						<a
@@ -48,7 +47,7 @@ export default function Footer() {
 						</a>
 					</div>
 					<p className="mt-6 text-gray-400">
-						"Don't be shy—let's chat! I'm ready to connect, whether it's in English, French, Portuguese, Italian, Spanish, or even code!"
+						&#34;Don&#39;t be shy—let&#39;s chat! I&#39;m ready to connect, whether it&#39;s in English, French, Portuguese, Italian, Spanish, or even code!&#34;
 					</p>
 				</div>
 			</section>

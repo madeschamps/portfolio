@@ -1,9 +1,28 @@
+.snakePath {
+	z-index: -1;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%)
+}
+
 .cards {
 	position: relative;
 	justify-content: center;
 	width: 100%;
 }
 
+.mainContent {
+	position: relative;
+}
+
 .card {
-	position: absolute;
+	&--odd {
+		align-self: flex-end;
+		margin-bottom: 10rem;
+	}
+
+	&--even {
+		align-self: flex-start;
+		margin-top: 10rem;
+	}
 }

@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import styles from './SectionSkills.module.scss'
+import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -92,7 +93,7 @@ export default function SectionSkills() {
 
   return (
     <>
-      <section ref={sectionRef} className={`${styles.module} min-h-screen overflow-hidden`}>
+      <section ref={sectionRef} className={`${styles.module} relative z-10 min-h-screen overflow-hidden`}>
         <div className="max-w-7xl mx-auto">
           <div className={styles.introPhrases}>
             <p ref={phrase1Ref} className={styles.introPhrase}>
@@ -108,35 +109,35 @@ export default function SectionSkills() {
                 <div>
                   <h3 className="text-4xl font-semibold mb-2">WordPress & PHP Mastery</h3>
                   <p className={`${styles.cardText} text-gray-300 text-xl`}>
-                    With over 10 years of experience in custom WordPress development, I create flexible, secure solutions using PHP, from custom plugins to API integrations. Using Gutenberg's block-based editor, I make content management simple and intuitive, allowing you to easily update your site without technical expertise.
+                    With over 10 years of experience in custom WordPress development, I create flexible, secure solutions using PHP, from custom plugins to API integrations. Using Gutenberg&#39;s block-based editor, I make content management simple and intuitive, allowing you to easily update your site without technical expertise.
                   </p>
                 </div>
                 <div className={styles.icons}>
-                  <img src={'/icon-wp.svg'} />
-                  <img src={'/icon-php.svg'} />
+                  <Image src={'/icon-wp.svg'} height={50} width={50} alt={'WordPress'} />
+                  <Image src={'/icon-php.svg'} height={50} width={50} alt={'PHP'} />
                 </div>
               </div>
               <div ref={el => { cardRefs.current[1] = el }} className="bg-gray-800 bg-opacity-50 rounded-lg p-6 flex flex-col items-center justify-between">
                 <div>
                   <h3 className="text-4xl font-semibold mb-2">JavaScript & API Integration</h3>
                   <p className={`${styles.cardText} text-gray-300 text-xl`}>
-                    I harness the power of JavaScript to build dynamic, responsive sites that engage users and seamlessly interact with APIs. Whether it's fetching real-time data or integrating third-party services, I ensure smooth and efficient functionality tailored to your needs.
+                    I harness the power of JavaScript to build dynamic, responsive sites that engage users and seamlessly interact with APIs. Whether it&#39;s fetching real-time data or integrating third-party services, I ensure smooth and efficient functionality tailored to your needs.
                   </p>
                 </div>
                 <div className={styles.icons}>
-                  <img src={'/icon-js.svg'} />
+                  <Image src={'/icon-js.svg'} height={50} width={50} alt={'JavaScript'} />
                 </div>
               </div>
               <div ref={el => { cardRefs.current[2] = el }} className="bg-gray-800 bg-opacity-50 rounded-lg p-6 flex flex-col items-center justify-between">
                 <div>
                   <h3 className="text-4xl font-semibold mb-2">Next.js & React: Modern Web Development</h3>
                   <p className={`${styles.cardText} text-gray-300 text-xl`}>
-                    By combining React's power with the performance optimization of Next.js, I build fast, SEO-optimized sites that scale with your business. Leveraging server-side rendering (SSR) and static site generation (SSG), I ensure your site is lightning fast and ready for the future.
+                    By combining React&#39;s power with the performance optimization of Next.js, I build fast, SEO-optimized sites that scale with your business. Leveraging server-side rendering (SSR) and static site generation (SSG), I ensure your site is lightning fast and ready for the future.
                   </p>
                 </div>
                 <div className={styles.icons}>
-                  <img src={'/icon-next.svg'} />
-                  <img src={'/icon-react.svg'} />
+                  <Image src={'/icon-next.svg'} height={50} width={50} alt={'Next JS'} />
+                  <Image src={'/icon-react.svg'} height={50} width={50} alt={'React JS'} />
                 </div>
               </div>
             </div>

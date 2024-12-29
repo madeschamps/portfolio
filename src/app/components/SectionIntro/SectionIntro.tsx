@@ -3,6 +3,7 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import styles from './SectionIntro.module.scss';
+import Image from "next/image";
 
 export default function SectionIntro() {
 	const topHalfRef = useRef(null);
@@ -131,7 +132,7 @@ export default function SectionIntro() {
 	}, []);
 
 	return (
-		<section ref={sectionRef} className={`${styles.module} h-screen flex items-center justify-center`}>
+		<section ref={sectionRef} className={`${styles.module} relative z-10 h-screen flex items-center justify-center`}>
 			<div className="">
 				<div className={styles.content}>
 					<div>
@@ -140,7 +141,7 @@ export default function SectionIntro() {
 								<span className={`${styles.hiText}`} id="hiText">
 									Hi
 								</span>
-								<span className={`${styles.amText}`}>I'm</span>
+								<span className={`${styles.amText}`}>I&#39;m</span>
 							</div>
 							<span className={`${styles.myName}`}>Marc-André</span>
 						</div>
@@ -160,7 +161,7 @@ export default function SectionIntro() {
 					</div>
 				</div>
 				<div className={styles.imageProfileWrapper}>
-					<img ref={imageProfile} className={styles.imageProfile} src={'/test-photo-profile.png'} alt="Me" />
+					<Image ref={imageProfile} className={styles.imageProfile} src={'/test-photo-profile.png'} width={400} height={350} alt="Me" />
 				</div>
 			</div>
 		</section>
